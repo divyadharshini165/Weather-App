@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h1>☁️ Weather WebApp</h1>
+
+    <div id="registerForm" style="display:none;">
+        <h2>Create Account</h2>
+        <input type="text" id="regUsername" placeholder="Choose username" />
+        <input type="password" id="regPassword" placeholder="Choose password" />
+        <button onclick="register()">Register</button>
+        <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login</a></p>
+    </div>
+
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Enter username" />
+        <input type="password" id="loginPassword" placeholder="Enter password" />
+        <label><input type="checkbox" id="rememberMe" /> Remember Me</label>
+        <button onclick="login()">Login</button>
+        <p>New here? <a href="#" onclick="toggleForm('register')">Register</a></p>
+    </div>
+
+    <p id="authMessage"></p>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
